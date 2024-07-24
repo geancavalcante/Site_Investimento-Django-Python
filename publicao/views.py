@@ -10,7 +10,7 @@ def home(request):
         years = float(request.POST.get('taxa_a_a', 0 ))
 
         taxa_de_juros = porcent / 100
-        result = float(capital * (1 + taxa_de_juros ) ** years)
+        result = (capital * (1 + taxa_de_juros ) ** years)
         print(result)
 
 
