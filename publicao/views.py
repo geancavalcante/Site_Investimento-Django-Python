@@ -7,7 +7,7 @@ def home(request):
     elif request.method == "POST":
         capital = float(request.POST.get('capital_investimento', 0))
         porcent = float(request.POST.get('taxa_de_porcentagem', 0))
-        years = int(request.POST.get('taxa_a_a', 0 ))
+        years = float(request.POST.get('taxa_a_a', 0 ))
 
         taxa_de_juros = porcent / 100
         result = float(capital * (1 + taxa_de_juros ) ** years)
