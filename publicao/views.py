@@ -5,8 +5,8 @@ def home(request):
         return render (request, 'index.html')
     
     elif request.method == "POST":
-        capital = int(request.POST.get('capital_investimento', 0))
-        porcent = int(request.POST.get('taxa_de_porcentagem', 0))
+        capital = float(request.POST.get('capital_investimento', 0))
+        porcent = float(request.POST.get('taxa_de_porcentagem', 0))
         years = int(request.POST.get('taxa_a_a', 0 ))
 
         taxa_de_juros = porcent / 100
